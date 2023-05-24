@@ -1,13 +1,7 @@
 const removeFromArray = function(array, ...check) {
     let newArray = [];
     array.forEach((item) => {
-        let checked = false;
-        check.forEach((x) => {
-            if (x === item) {
-                checked = true;
-            }
-        });
-        if (checked) {
+        if (check.includes(item)) {
             /*remove from array*/
         } else {
             newArray.push(item);
